@@ -1,0 +1,254 @@
+/* Background with organ donation theme image */
+.donor-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh; /* increased height */
+  width: 100%;
+  background: url("https://cdn.pixabay.com/photo/2017/06/29/01/01/heart-2458846_1280.jpg") 
+    no-repeat center center/cover;
+  padding: 70px; /* increased padding */
+}
+
+/* Card */
+.donor-form-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 25px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 700px; /* increased width */
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.donor-form-card h2 {
+  color: #4a148c;
+  margin-bottom: 15px;
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  height: 10px; /* a little thicker */
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar div {
+  height: 100%;
+  width: 0%; /* starts empty */
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  transition: width 0.4s ease;
+}
+
+/* Optional step label */
+.progress-label {
+  text-align: right;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Input field */
+.form-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fafafa;
+  margin-bottom: 20px;
+}
+.form-group .icon {
+  margin-right: 10px;
+  color: #185a9d;
+  font-size: 18px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  background: transparent;
+  font-family: inherit;
+  text-align: left;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Focus style */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #43cea2;
+  box-shadow: 0 0 0 2px rgba(67, 206, 162, 0.3);
+}
+
+/* Error message */
+.error-text {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.btn-primary, .btn-secondary, .btn-submit {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  color: white;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-secondary {
+  background: #ddd;
+  color: #333;
+}
+.btn-secondary:hover { background: #bbb; }
+.btn-submit {
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.btn-submit:hover { transform: translateY(-2px); }
+
+.btn-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-submit:disabled:hover {
+  transform: none;
+}
+
+/* Organ Selection Styles */
+.organ-selection {
+  text-align: left;
+}
+
+.organ-selection h3 {
+  color: #4a148c;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selected-organs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  min-height: 40px;
+  padding: 10px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.selected-organ {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.remove-organ {
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.remove-organ:hover {
+  opacity: 1;
+}
+
+.available-organs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.available-organ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.available-organ:hover {
+  border-color: #43cea2;
+  background: #f0f8ff;
+  transform: translateY(-1px);
+}
+
+.add-icon {
+  color: #43cea2;
+  font-size: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .donor-form-container {
+    padding: 20px;
+    min-height: auto;
+  }
+  .donor-form-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .donor-form-content {
+    flex-direction: column;
+  }
+}

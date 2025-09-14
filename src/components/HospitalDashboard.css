@@ -1,0 +1,212 @@
+.hospital-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.header-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffdd57;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 25px;
+}
+
+/* Request Form Section */
+.request-form-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.request-form-section h2 {
+  color: #4a148c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.request-form input,
+.request-form select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.request-form input:focus,
+.request-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Tables */
+.availability-section,
+.requests-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.availability-section h2,
+.requests-section h2 {
+  color: #4a148c;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.availability-table,
+.requests-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.requests-table .table-header {
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  align-items: center;
+}
+
+.requests-table .table-row {
+  grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.status.available,
+.status.fulfilled {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.unavailable,
+.status.pending {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.urgency {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.urgency.low {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.urgency.medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.urgency.high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

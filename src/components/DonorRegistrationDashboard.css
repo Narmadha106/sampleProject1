@@ -1,0 +1,268 @@
+.donor-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-navigation button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-navigation button.active,
+.tab-navigation button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #185a9d;
+}
+
+.dashboard-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content h2 {
+  color: #185a9d;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-group:focus-within {
+  border-color: #43cea2;
+}
+
+.form-group .icon {
+  margin-right: 12px;
+  color: #43cea2;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  background: transparent;
+  text-align: left;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Organ Selection */
+.organ-selection {
+  margin: 20px 0;
+}
+
+.organ-selection h3 {
+  color: #185a9d;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selected-organs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  min-height: 40px;
+  padding: 10px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.selected-organ {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.selected-organ svg {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.selected-organ svg:hover {
+  opacity: 1;
+}
+
+.available-organs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.available-organ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.available-organ:hover {
+  border-color: #43cea2;
+  background: #f0f8ff;
+  transform: translateY(-1px);
+}
+
+/* Availability Grid */
+.availability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.availability-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.2s;
+}
+
+.availability-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.availability-card h3 {
+  color: #185a9d;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.availability-card .count {
+  font-size: 36px;
+  font-weight: 700;
+  color: #43cea2;
+  margin-bottom: 10px;
+}
+
+.availability-card .status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.unavailable {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.error-text {
+  color: #e63946;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .availability-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
